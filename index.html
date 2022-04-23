@@ -19,23 +19,54 @@
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 		<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/vnteamopen/vnteamopen.github.io/main/favicon.ico">
 		<style>
 			body {
 				margin: 0;
 			}
 			.logo {
-				font-family: 'Montserrat', sans-serif;
-				font-size: 100px;
+				max-width: 250px;
+			}
+			.header {
 				text-align: center;
 			}
-			.center-screen {
+			.projects {
+				list-style: none;
 				display: flex;
+				flex-wrap: wrap;
+				align-items: flex-start;
 				justify-content: center;
-				align-items: center;
+				float: left;
+				margin: auto;
+				width: 100%;
+			}
+			.projects .project {
+				margin: 10px;
+			}
+			.projects .project a {
+				display: block;
+				width: 130px;
+				height: 130px;
+				box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+				padding: 10px;
+				margin-top: 5px;
+			}
+			.projects .project a:hover {
+				box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+			}
+			.projects .project t, .projects .project c {
+				font-family: 'Montserrat', sans-serif;
+				font-size: 14px;
+				display: block;
 				text-align: center;
-				min-height: 100vh;
+			}
+			.projects .project t {
+				font-weight: 600;
+			}
+			.projects .project c {
+				font-weight: 400;
+				margin-top: 10px;
 			}
 			a, a:hover, a:visited, a:active {
 				color: inherit;
@@ -44,9 +75,20 @@
 		</style>
 	</head>
 	<body>
-		<div class="center-screen">
-			<p class="logo"><img src="https://raw.githubusercontent.com/vnteamopen/vnteamopen.github.io/main/logo.png"/></p>
-			<p><a href="https://github.com/vnteamopen">Github</a></p>
-		</div>
+		<div class="header"><img class="logo" src="https://raw.githubusercontent.com/vnteamopen/vnteamopen.github.io/main/logo.png" /></div>
+		<ul class="projects">
+			<li class="project">
+				<a target="_blank" href="https://github.com/vnteamopen">
+					<t>Github</t>
+					<c>The home page source code</c>
+				</a>
+			</li>
+			<li class="project">
+				<a target="_blank" href="https://github.com/vnteamopen/godebouncer">
+					<t>Go Debouncer</t>
+					<c>a Go language library that support debounce actions.</c>
+				</a>
+			</li>
+		</ul>
 	</body>
 </html>
